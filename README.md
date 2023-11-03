@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TURING - AI SaaS Tool
 
-## Getting Started
+![alt text](./public/home-page.png)
 
-First, run the development server:
+## About The Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+In a world driven by technology, the demand for creative content has never been higher. From images and code to music and videos, businesses and individuals are constantly seeking innovative ways to stand out and engage their audiences. This AI SaaS (Software as a Service) platform is the answer to these needs, offering a comprehensive suite of AI-powered tools for content generation and an AI chatbot for seamless interaction.
+
+The application is built using Next.js 13, Prisma, Stripe, and many other technologies. Additional information can be found below.
+
+# Getting Started
+
+## Requirements
+
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
+- [Nodejs](https://nodejs.org/en/)
+  - You'll know you've installed nodejs right if you can run:
+    - `node --version` and get an ouput like: `vx.x.x`
+- [NEXT.js](https://nextjs.org/docs/getting-started/installation)
+  - You can now create a new React application by typing:
+    - `npx create-next-app@latest my-app --typescript --tailwind --eslint`
+- [Prisma](https://www.prisma.io/docs/getting-started/quickstart)
+  - Please visit the site to setup and installation.
+    - `npm install prisma --save-dev`
+- [PlanetScale](https://planetscale.com/)
+  - PlanetScale is a MySQL-compatible, serverless database platform.
+  - Please visit the site for more information.
+- [OpenAI](https://platform.openai.com/)
+  - OpenAI is an AI research and deployment company.
+    - `npm install openai`
+- [Clerk](https://clerk.com/docs/quickstarts/nextjs)
+  - Authentication and user management to your application.
+  - `npm install @clerk/nextjs`
+- [Stripe](https://clerk.com/docs/quickstarts/nextjs)
+  - Online payment processing and commerce solutions for internet businesses.
+  - `npm install --save stripe @stripe/stripe-js next`
+- [Replicate](https://replicate.com/docs/get-started/nodejs)
+  - Open source machine learning models.
+  - `npm install replicate`
+
+# Built With
+
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/en-US/examples)
+- [Shadcn](https://ui.shadcn.com/docs)
+
+## Quickstart
+
+Cloning the repository
+
+```
+git clone https://github.com/vaasanthk/ai-saas-turing.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
+```js
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+OPENAI_API_KEY=
+REPLICATE_API_TOKEN=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+DATABASE_URL=
 
-## Deploy on Vercel
+STRIPE_API_KEY=
+STRIPE_WEBHOOK_SECRET=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Setup Prisma
+
+Add MySQL Database (PlanetScale)
+
+```shell
+npx prisma generate
+npx prisma db push
+npx prisma studio
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
+
+# Thank you!
