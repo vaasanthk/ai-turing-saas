@@ -98,5 +98,9 @@ npx prisma studio
 ```shell
 npm run dev
 ```
+Visit deployed app on vercel:
+
+https://ai-turing-saas.vercel.app/code
+
 
 # Thank you!
